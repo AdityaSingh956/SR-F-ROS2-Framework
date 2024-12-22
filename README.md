@@ -1,15 +1,10 @@
 # <div align="center">Obstacle Detection with RRT Path Planning</div>
 ![image](https://github.com/WinstonHChou/winter-2024-final-project-team-7/assets/68310078/0ba1c6cb-c9e0-4cf7-905a-f5f16e6bb2ca)
-### <div align="center"> Final Project </div>
-
-
-<div align="center">
-    <img src="images\ucsdyellow-car.jpg" height="300"> <img src="images\ucsdcart.png" height="300"><br>
 
 </div>
 
 <hr>
-## **Abstract**
+## Abstract
 We propose developing an autonomous car navigation system using Rapidly-Exploring Random Trees (RRT) with LiDAR for real-time environment mapping and obstacle detection.  Using LiDAR, the system will create a virtual map, enabling the RRT algorithm to identify viable paths around obstacles. A local planner using the Regulated Pure Pursuit Controller will use generated waypoints to guide the car to the target, while real-time controls (x = u̇, v̇, θ̇) will manage the car’s movement. This setup allows for real-time decision-making, enabling the car to differentiate between obstacles on the fly and navigate dynamically toward its goal.
 
 <hr>
