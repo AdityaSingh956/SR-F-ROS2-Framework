@@ -5,18 +5,18 @@
 
 <hr>
 
-We propose developing an autonomous car navigation system using Rapidly-Exploring Random Trees (RRT) with LiDAR for real-time environment mapping and obstacle detection.  Using LiDAR, the system will create a virtual map, enabling the RRT algorithm to identify viable paths around obstacles. A local planner using the Regulated Pure Pursuit Controller will use generated waypoints to guide the car to the target, while real-time controls (x = u̇, v̇, θ̇) will manage the car’s movement. This setup allows for real-time decision-making, enabling the car to differentiate between obstacles on the fly and navigate dynamically toward its goal.
+I propose developing an autonomous car navigation system using Rapidly-Exploring Random Trees (RRT) with LiDAR for real-time environment mapping and obstacle detection.  Using LiDAR, the system will create a virtual map, enabling the RRT algorithm to identify viable paths around obstacles. A local planner using the Safe Returning FaSTrack Controller will use generated waypoints to guide the car to the target, while real-time controls (x = u̇, v̇, θ̇) will manage the car’s movement. This setup allows for real-time decision-making, enabling the car to differentiate between obstacles on the fly and navigate dynamically toward its goal.
 
 <hr>
 
 ## Software
 
 ### Laserscan
-- Laserscan was another key component to our project which helped enable efficient processing of lidar data for environmental mapping and localization within the ROS2 framework. By using LaserScan data, we were able to detect and visualize the robot’s surroundings in real time, providing a clear 2D representation of spatial layouts. This was also visualized using Rviz2 which optimized visualization settings for clarity.
+- Laserscan was another key component to project which helped enable efficient processing of lidar data for environmental mapping and localization within the ROS2 framework. By using LaserScan data, we were able to detect and visualize the robot’s surroundings in real time, providing a clear 2D representation of spatial layouts. This was also visualized using Rviz2 which optimized visualization settings for clarity.
 ### Fast_Lio and PointCloud
-- The Fast LIO was integral to our project, which helped enable integration of lidar odometry and mapping into the ROS2 framework. This setup allowed the robot to process lidar data in real time and generate accurate odometry for localization  while simultaneously creating detailed point cloud representations of the environment. These point clouds were visualized using the tool, Rviz2 and this helped assess the environment in 3D which also helped the robot to map and detect obstacles.
+- The Fast LIO was integral to project, which helped enable integration of lidar odometry and mapping into the ROS2 framework. This setup allowed the robot to process lidar data in real time and generate accurate odometry for localization  while simultaneously creating detailed point cloud representations of the environment. These point clouds were visualized using the tool, Rviz2 and this helped assess the environment in 3D which also helped the robot to map and detect obstacles.
 ### Odometry
-- The odometry system was crucial for our project, which provided the foundation for accurate localization and navigation within the ROS2 framework. The system allowed the robot to determine its precise position and orientation relative to its environment. This was also visualized using Rviz2, which helped provide a clear and smooth tracking of the robot’s movement.
+- The odometry system was crucial for project, which provided the foundation for accurate localization and navigation within the ROS2 framework. The system allowed the robot to determine its precise position and orientation relative to its environment. This was also visualized using Rviz2, which helped provide a clear and smooth tracking of the robot’s movement.
 ### SLAM Toolbox
 - The SLAM Toolbox incorporates the 2D laser scan data to detect the obstacles. Using TF transforms and laser scan data, it creates an occupancy grid that either marks cells as occupied (100), empty (0), or unknown (-1). In simulation, the SLAM toolbox also provides odometry data that allows the robot to be simultaneously mapped onto the map as well as providing the robot with its real time position.
 ### RViz
